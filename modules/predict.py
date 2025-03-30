@@ -7,12 +7,12 @@ import csv
 
 from datetime import datetime
 
-path = os.environ.get('PROJECT_PATH', '/opt/airflow/plugins')
-# path = os.environ.get('PROJECT_PATH', '..')
+# path = os.environ.get('PROJECT_PATH', '/opt/airflow/plugins')
+path = os.environ.get('PROJECT_PATH', '..')
 path_to_models = f'{path}/data/models/cars_pipe_prediction.pkl'
 path_to_test_files = f'{path}/data/test'
-files = os.listdir('/opt/airflow/plugins/data/test')
-# files = os.listdir(f'{path}/data/test')
+# files = os.listdir('/opt/airflow/plugins/data/test')
+files = os.listdir(f'{path}/data/test')
 
 def predict():
     def make_pred(file, model):
